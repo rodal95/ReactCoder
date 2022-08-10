@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import CartWidjet from './CartWidjet';
 
 function BasicExample() {
   return (
@@ -23,7 +24,10 @@ function BasicExample() {
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
+        <CartWidjet/>
       </Container>
+
+      
     </Navbar>
   );
 }
