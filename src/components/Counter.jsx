@@ -15,8 +15,10 @@ const Counter = () =>{
     }
     function agregar(){
       if(count != 0){
-        cantidadElegida=count
-        stock = stock - cantidadElegida
+        setcount(0)
+        cantidadElegida += count
+        
+        stock = stock - count
         return {cantidadElegida, stock}
       }
     }
