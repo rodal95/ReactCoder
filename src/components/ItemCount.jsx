@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 
-const datos = document.getElementById("datos")
-export default function ItemCount({stock, initial, onAdd}) {
 
+export default function ItemCount({stock, initial, onAdd}) {
+  
     const[contador, setContador] = useState(initial)
     function Restar(){
         if(contador > initial){
@@ -15,7 +15,6 @@ export default function ItemCount({stock, initial, onAdd}) {
         setContador(contador+1)
       }
     }
-    
 
   return (
     <div > 
@@ -24,7 +23,12 @@ export default function ItemCount({stock, initial, onAdd}) {
     <span id="datos"></span>
     <div ><button onClick={sumar}>+</button>
     <button onClick={()=>setContador(initial)}>Limpiar</button>
-    <button onClick={()=>{onAdd(contador)} }>Agregar</button>
+    <button onClick={()=>{onAdd(contador)
+    const datos = document.getElementById("datos")
+    datos.innerHTML='<p>la cantidad elegida es</p>'+contador
+    stock = stock - contador
+    return stock
+    } }>Agregar</button>
     <button onClick={Restar} disabled={contador === initial} >-</button></div> 
     </div>
   )
