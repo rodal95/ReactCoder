@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Item({id,title, price}) {
+export default function Item({id,title, price, imagen}) {
   return (
     <div>
         
