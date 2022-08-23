@@ -32,7 +32,9 @@ useEffect(()=> {
       
       {items.length ?
       <ItemList items ={items}/>:
-      <Spinner></Spinner>
+      <Spinner animation="border" role="status">
+      <span className="visually-hidden">Loading...</span>
+      </Spinner>
       }
 
      <ItemCount stock = {5} initial = {1} onAdd = {onAdd}/> 

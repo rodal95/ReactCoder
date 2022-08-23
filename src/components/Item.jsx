@@ -5,7 +5,7 @@ export default function Item({id,title, price}) {
     <div>
         
         <h3>{title}</h3><br />
-       <b> <span>US${price}</span></b><br />
+       <b><span>US${price}</span></b><br />
     </div>
   )
 }
