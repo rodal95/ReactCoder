@@ -29,11 +29,13 @@ useEffect(()=> {
   
   return (
     <div>{greeting.greeting}
-      
+      <div>
       {items.length ?
       <ItemList items ={items}/>:
-      <Spinner></Spinner>
-      }
+      <Spinner animation="border" role="status">
+      <span className="visually-hidden">Loading...</span>
+      </Spinner>
+      }</div>
 
      <ItemCount stock = {5} initial = {1} onAdd = {onAdd}/> 
     </div>
