@@ -5,7 +5,7 @@ const ItemList = ({items}) => {
     <>
     <div  style={{display:'flex',flexDirection:'Row', justifyContent:'center'}}>
     {items.map((item, index)=>
-    <Item key={index} id={item.id} title={item.titulo} price= {item.precio}/>
+    <Item key={index} id={item.id} title={item.titulo} price= {item.precio} image={item.imagen}/>
     )}
     </div>
 
