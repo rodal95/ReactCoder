@@ -27,6 +27,7 @@ export default function ItemCount({stock, initial, onAdd}) {
     const datos = document.getElementById("datos")
     datos.innerHTML='<p>la cantidad elegida es</p>'+contador
     stock = stock - contador
+    setContador(initial)
     return stock
     } }>Agregar</button>
     <button onClick={Restar} disabled={contador === initial} >-</button></div> 
