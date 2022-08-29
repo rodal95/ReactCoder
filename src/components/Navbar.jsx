@@ -19,12 +19,12 @@ function BasicExample() {
               </Nav.Link>
             <Nav.Link href="#link">Nosotros</Nav.Link>
             <NavDropdown title="Catalogo" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Armas de Mano</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Armas de Asedio
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Vehiculos</NavDropdown.Item>
-              
+              <Link to='/item/1'>
+              <NavDropdown.Item href="#action/3.1">Rifles</NavDropdown.Item>
+              </Link>
+              <Link to='/item/2'>
+              <NavDropdown.Item href="#action/3.3">Francotiradores</NavDropdown.Item>
+              </Link>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

@@ -13,7 +13,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={<ItemListContainer greeting ="hola pasando datos desde app"/>}/>
-        
+        <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
         <Route path='/item/:id' element ={<ItemDetailContainer/>}/>
       </Routes>
       </BrowserRouter>
