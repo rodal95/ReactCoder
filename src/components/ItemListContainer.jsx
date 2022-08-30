@@ -12,7 +12,7 @@ export default function ItemListContainer(greeting) {
   const {categoryId} = useParams()
 
 useEffect(()=> {
-    let productos = [{id:1,category:"rifle" , titulo: "Ak 47", precio: 500, imagen:"https://www.lavanguardia.com/files/og_thumbnail/uploads/2019/11/30/5fa535c98fec8.jpeg"}, {id:2,category:"francotirador", titulo:"M40", precio:350, imagen:"https://www.armas.es/files/page/img/1/armas-legendarias-sniper-m40-a100.jpg"}];
+    let productos = [{id:1,category:"rifles" , titulo: "Ak 47", precio: 500, imagen:"https://www.lavanguardia.com/files/og_thumbnail/uploads/2019/11/30/5fa535c98fec8.jpeg"}, {id:2,category:"francotiradores", titulo:"M40", precio:350, imagen:"https://www.armas.es/files/page/img/1/armas-legendarias-sniper-m40-a100.jpg"}];
     new Promise((resolve)=>{
       let productosFiltrados = [];
       setTimeout(()=>{
