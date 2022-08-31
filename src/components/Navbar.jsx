@@ -40,12 +40,7 @@ function BasicExample() {
               </Nav.Link>
             <Nav.Link href="#link">Nosotros</Nav.Link>
             <NavDropdown title="Catalogo" id="basic-nav-dropdown">
-            {/* <NavDropdown.Item href="#action/3.2">
-                <Link to={"category/rifles"} >rifles</Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                <Link to={"category/francotiradores"} >francotirador</Link>
-              </NavDropdown.Item> */}
+           
               {links}
 
             </NavDropdown>
