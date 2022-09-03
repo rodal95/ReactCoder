@@ -1,12 +1,21 @@
 import React from 'react'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import ItemCount from './ItemCount';
 
 export default function ItemDetail({item}) {
     const {id,precio,titulo,imagen} = item;
+    const [counter, setCounter] = useState(0)
+
+    const onAdd = (count)=>{
+      setCounter(count)
+    }
   return (
     <div>
         <h1>{titulo}-{id}</h1>
-        <img src={imagen}></img>
+        <img src={imagen} width="300px"></img>
         <h3>{precio}</h3>
+        {counter ? <Link to="/cart"><button>Finalizar Compra</button></Link>: <ItemCount stock = {5} initial = {1} onAdd = {onAdd}/> }
     </div>
   )
 }

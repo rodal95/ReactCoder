@@ -27,8 +27,7 @@ useEffect(()=> {
 
 
 },[categoryId])
-  const onAdd = (contador)=>{
-  }
+  
 
   
   return (
@@ -41,7 +40,7 @@ useEffect(()=> {
       </Spinner>
       }</div>
 
-     <ItemCount stock = {5} initial = {1} onAdd = {onAdd}/> 
+   
     </div>
   )
 }
