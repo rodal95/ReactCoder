@@ -9,8 +9,8 @@ export default function Cart(){
     return(<>
     <div>Cart</div>
         {! items && <span>no tengo items</span>}
-        {items.lenght && <ol>
-            {items.map(((item, indx)=><li key={indx}>{item.title}-{item.quantity}</li>))}
+        {items.length && <ol>
+            {items.map(((item, indx)=><li key={indx}>{item.titulo}-{item.quantity}</li>))}
         </ol>}
     
 </>
