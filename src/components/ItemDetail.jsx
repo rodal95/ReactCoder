@@ -16,7 +16,7 @@ export default function ItemDetail({item}) {
   return (
     <div>
         <h1>{titulo}-{id}</h1>
-        <img src={imagen} width="300px"></img>
+        <img src={imagen} width="300px" alt='nada'></img>
         <h3>{precio}</h3>
         {counter ? <Link to="/cart"><button>Finalizar Compra</button></Link>: <ItemCount stock = {5} initial = {1} onAdd = {onAdd}/> }
     </div>

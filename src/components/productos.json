@@ -1,6 +1,0 @@
-[{"id":1,"category":"rifles", "titulo": "Ak 47", "precio": 500, "imagen":"https://www.lavanguardia.com/files/og_thumbnail/uploads/2019/11/30/5fa535c98fec8.jpeg"},
- {"id":2,"category":"francotirador", "titulo":"M40", "precio":350, "imagen":"https://www.armas.es/files/page/img/1/armas-legendarias-sniper-m40-a100.jpg"},
- {"id":3,"category":"rifles", "titulo":"AR-15", "precio":550, "imagen":"https://as01.epimg.net/meristation/imagenes/2021/02/16/noticias/1613465787_691919_1613466221_sumario_normal.jpg"},
- {"id":4,"category":"francotirador", "titulo":"F480", "precio":850, "imagen":"https://i.blogs.es/bd0b94/sniper/1366_521.jpeg"},
- {"id":5,"category":"pistolas", "titulo":"M1911", "precio":150, "imagen":"https://st2.depositphotos.com/3901147/6412/i/950/depositphotos_64123085-stock-photo-black-revolver-gun-and-semi.jpg"}
-]

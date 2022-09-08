@@ -4,8 +4,8 @@ const ItemList = ({items}) => {
   return (
     <>
     <div  style={{display:'flex',flexDirection:'Row', justifyContent:'space-around'}}>
-    {items.map((item, index)=>
-    <Item key={index} id={item.id} title={item.titulo} price= {item.precio} image={item.imagen}/>
+    {items.map((item, indx)=>
+    <Item key={indx} id={item.id} title={item.titulo} price= {item.precio} image={item.imagen}/>
     )}
     </div>
 
