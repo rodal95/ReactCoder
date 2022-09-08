@@ -3,13 +3,14 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidjet from './CartWidjet';
-
+import { useContext } from 'react';
 import {Link} from 'react-router-dom';
 import { useEffect } from 'react';
+import { CartContext } from '../CartContext';
 
 
 function BasicExample() {
-
+  const {items}= useContext(CartContext)
   let productos = [{id:1,categoria:"rifles", titulo: "Ak 47", precio: 500, imagen:"https://www.lavanguardia.com/files/og_thumbnail/uploads/2019/11/30/5fa535c98fec8.jpeg"}, {id:2,categoria:"francotiradores", titulo:"M40", precio:350, imagen:"https://www.armas.es/files/page/img/1/armas-legendarias-sniper-m40-a100.jpg"}]
   let categorias = ["rifles","francotiradores"]
   let links = []
@@ -19,12 +20,9 @@ function BasicExample() {
     return  (<NavDropdown.Item href="#action/3.2">
       <Link to={`category/${element}`}>{element}</Link>
       </NavDropdown.Item>)
-
-
 })
   
-  
-  console.log(links)
+
 
   return (
     <Navbar bg="light" expand="lg">
@@ -46,7 +44,7 @@ function BasicExample() {
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
-        <CartWidjet/>
+       {!!items.length && <Link to={'/cart'}> <CartWidjet/></Link>}
       </Container>
 
       
