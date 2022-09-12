@@ -16,7 +16,7 @@ function BasicExample() {
   links = categorias.map((element, indx)=> {
     
     return  (<NavDropdown.Item key={indx}>
-      <Link to={`category/${element}`} key={indx}>{element}</Link>
+      <Link to={`category/${element}`} >{element}</Link>
       </NavDropdown.Item>)
 })
   
