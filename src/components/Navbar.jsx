@@ -10,7 +10,9 @@ import { CartContext } from '../CartContext';
 
 function BasicExample() {
   const {items}= useContext(CartContext)
-  let categorias = ["rifles","francotiradores"]
+
+  
+  let categorias = ["rifles","francotirador"]
   let links = []
   
   links = categorias.map((element, indx)=> {
