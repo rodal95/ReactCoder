@@ -18,6 +18,7 @@ export default function Cart(){
         <div>
             <button onClick={clear}>Limpiar Carrito</button>
             <Link to='/'><button>Ir a inicio</button></Link>
+            <Link to='/checkout'><button>Checkout</button></Link>
         </div>
     
 </>

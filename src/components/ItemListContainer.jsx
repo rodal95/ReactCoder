@@ -56,7 +56,7 @@ export default function ItemListContainer(greeting) {
 
   
   return (
-    <div>{greeting.greeting}
+    <div>
       <div>
       {items.length ?
       <ItemList items ={items}/>:
