@@ -17,7 +17,7 @@ function BasicExample() {
   
   links = categorias.map((element, indx)=> {
     
-    return  (<NavDropdown.Item key={indx}>
+    return  (<NavDropdown.Item key={indx} as="button">
       <Link to={`category/${element}`} >{element}</Link>
       </NavDropdown.Item>)
 })
@@ -31,11 +31,11 @@ function BasicExample() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link>
-              <Link to={`/`} style={{textDecoration:"none"}}>
+            <Navbar.Text>
+             <Link to={"/"} >
               Home
               </Link>
-              </Nav.Link>
+              </Navbar.Text>
             <Nav.Link>Nosotros</Nav.Link>
             <NavDropdown title="Catalogo" id="basic-nav-dropdown">
            

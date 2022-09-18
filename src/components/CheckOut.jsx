@@ -2,16 +2,16 @@ import React , {useContext} from 'react'
 import { addDoc, collection, getFirestore, setDoc } from 'firebase/firestore'
 import {CartContext} from "../CartContext"
 import { useState } from 'react'
-
+import db from '../services'
 
 export default function CheckOut(){
-    const {cart} = useContext(CartContext)
+    const {getCart} = useContext(CartContext)
     const [name, SetName] = useState('')
-    const [phone, Setphone] = useState('')
-    const [email, Setemail] = useState('')
-
-    function finalizarCompra({name, phone, email}){
-        const db = getFirestore()
+    const [phone, SetPhone] = useState('')
+    const [email, SetEmail] = useState('')
+    const cart = getCart()
+    function finalizarCompra(){
+        console.log(name)
         let order = {buyer: {name, phone, email}, items: cart, total: cart.reduce((pv, cv)=> pv + (cv.quantity*cv.precio), 0)}
         const orderCollection = collection(db, "order")
         addDoc(orderCollection, order)
@@ -24,10 +24,10 @@ export default function CheckOut(){
         <>
             <div>
                 <form>
-                    <input value ={name} onChange ={(e)=> SetName(e.value)} type="text" placeholder='Nombre'></input>
-                    <input value ={phone} onChange ={(e)=> Setphone(e.value)} type="text" placeholder='Telefono'></input>
-                    <input value ={email} onChange ={(e)=> Setemail(e.value)} type="email" placeholder='Email'></input>
-                    <button onClick={()=>{finalizarCompra()} }>Finalizar compra</button>
+                    <input  onChange ={(e)=>  SetName(e.target.value)} type="text" placeholder='Nombre'></input>
+                    <input  onChange ={(e)=> SetPhone(e.target.value)} type="text" placeholder='Telefono'></input>
+                    <input  onChange ={(e)=> SetEmail(e.target.value)} type="email" placeholder='Email'></input>
+                    <button type="button" onClick={()=>{finalizarCompra()} }>Finalizar compra</button>
                 </form>
             </div>
         
