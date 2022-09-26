@@ -3,20 +3,43 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidjet from './CartWidjet';
-import { useContext } from 'react';
+import { useContext, useState, useEffect, useParams } from 'react';
 import {Link} from 'react-router-dom';
 import { CartContext } from '../CartContext';
-
+import db from '../services'
+import { collection, doc, getDocs } from 'firebase/firestore';
 
 function BasicExample() {
   const {items}= useContext(CartContext)
 
-  
-  let categorias = ["rifles","francotirador"]
-  let links = []
-  
-  links = categorias.map((element, indx)=> {
+
+  const [categorias, setCategorias] = useState([]);
+
+  useEffect(()=>{
+
+    const getColData = async ()=> {
+      try{
+      const data = collection(db, "products") 
+       const col = await getDocs(data)
+       const res = col.docs.map((doc)=> doc.data().categoria ) 
+       setCategorias(res)
+
+      } catch(error){
+        console.log(error)
+      }
+       
+    }
+    getColData()
     
+    return ()=>{
+
+    }
+  },[])
+console.log(categorias)
+
+
+  let links = []
+  links = categorias.map((element, indx)=> {
     return  (<NavDropdown.Item key={indx} as="button">
       <Link to={`category/${element}`} >{element}</Link>
       </NavDropdown.Item>)

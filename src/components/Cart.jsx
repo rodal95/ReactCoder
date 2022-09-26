@@ -7,9 +7,8 @@ export default function Cart(){
     const {items, removeItem, clear} = useContext(CartContext)
 
     return(<>
-    <div>Cart</div>
         {!items.length ? <span>no tengo items</span>:
-        <><ol >
+        <><ol>
             {items.map(((item, indx)=><li key={indx}>{item.titulo}-{item.quantity}<button onClick={()=>removeItem(item.id)}>Remover</button></li>))}
         </ol>
         <h3>precioTtotal = ${items.reduce((pv, cv)=>pv+(cv.precio*cv.quantity) ,0)}</h3>

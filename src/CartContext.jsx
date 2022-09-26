@@ -28,7 +28,6 @@ export function CartProvider({children}){
     function isInCart(itemId){
         
            return items.find((element)=>element.id == itemId)
-       
 
     }
     function getCart(){
