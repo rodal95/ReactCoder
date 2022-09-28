@@ -11,42 +11,31 @@ import { collection, doc, getDocs } from 'firebase/firestore';
 
 function BasicExample() {
   const {items}= useContext(CartContext)
-
-
   const [categorias, setCategorias] = useState([]);
-
   useEffect(()=>{
-
     const getColData = async ()=> {
       try{
       const data = collection(db, "products") 
        const col = await getDocs(data)
        const res = col.docs.map((doc)=> doc.data().categoria ) 
-       setCategorias(res)
-
+       let categoriasFiltradas =res.filter((item, index)=>{
+        return res.indexOf(item) === index
+       })
+       
+       setCategorias(categoriasFiltradas)
       } catch(error){
         console.log(error)
       }
-       
     }
     getColData()
-    
-    return ()=>{
-
-    }
+    return ()=>{}
   },[])
-console.log(categorias)
-
-
   let links = []
   links = categorias.map((element, indx)=> {
-    return  (<NavDropdown.Item key={indx} as="button">
-      <Link to={`category/${element}`} >{element}</Link>
+    return  (<NavDropdown.Item key={indx} as="button" >
+      <Link to={`category/${element}`} style={{textDecoration:"none"}}>{element}</Link>
       </NavDropdown.Item>)
 })
-  
-
-
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -55,7 +44,7 @@ console.log(categorias)
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Navbar.Text>
-             <Link to={"/"} >
+             <Link to={"/"} style={{textDecoration:"none"}}>
               Home
               </Link>
               </Navbar.Text>
@@ -63,7 +52,9 @@ console.log(categorias)
             <NavDropdown title="Catalogo" id="basic-nav-dropdown">
            
               {links}
-
+              <NavDropdown.Item as="button" >
+               <Link to={`/`} style={{textDecoration:"none"}}>Todos</Link>
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

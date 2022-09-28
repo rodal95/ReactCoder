@@ -6,8 +6,10 @@ import { useState } from 'react'
 import db from '../services'
 import Swal from 'sweetalert2'
 import Cart from './Cart'
+import { faRefresh } from '@fortawesome/free-solid-svg-icons'
 
 export default function CheckOut(){
+    
     const {getCart} = useContext(CartContext)
     const [name, SetName] = useState('')
     const [phone, SetPhone] = useState('')
@@ -15,24 +17,25 @@ export default function CheckOut(){
     const cart = getCart()
     const navigate = useNavigate()
     const {clear} = useContext(CartContext)
-     function finalizarCompra(){
+    function finalizarCompra(){
         
         let order = {buyer: {name, phone, email}, items: cart, total: cart.reduce((pv, cv)=> pv + (cv.quantity*cv.precio), 0)}
 
         const orderCollection = collection(db, "order")
         addDoc(orderCollection, order)
-        Swal.fire('Gracias por su compra')
+        
        
         .then(({id})=>{
             console.log(id)
+            Swal.fire('Gracias por su compra su numero de orden es ', id)
         })
         .then(()=>{
             navigate("/")
+            clear()
         })
-        .then(clear)
-       
         .catch((e)=>console.log(e))
     }
+   
     return (
         <>
             <div>
