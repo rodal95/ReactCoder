@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
 import { CartContext } from '../CartContext';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
-
+import Button from 'react-bootstrap/Button';
 export default function ItemDetail({item}) {
 
 
@@ -19,10 +19,10 @@ export default function ItemDetail({item}) {
   return (
     <>
       <div className='ItemDetail'>
-          <h1>{titulo}-{id}</h1>
+          <h1>{titulo}</h1>
           <img src={imagen} width="300px" alt='nada'></img>
           <h3>$$ {precio}</h3>
-          {counter ?(<><Link to="/"><button>Continuar comprando</button></Link><Link to="/cart"><button>Finalizar Compra</button></Link></>): 
+          {counter ?(<div className='finalizarCompra'><Link to="/"><Button>Continuar comprando</Button></Link><Link to="/cart"><Button>Finalizar Compra</Button></Link></div>): 
           <ItemCount stock = {stock} initial = {1} onAdd = {onAdd}/>}
       </div>
     </>

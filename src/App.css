@@ -39,6 +39,54 @@
 .ItemDetail{
   display:flex;
   flex-Direction:column;
-  align-Items:flex-start;
+  align-Items:center;
+  text-align: center;
   margin-left: 100px;
+  margin-top: 100px;
+  padding: 10px 10px;
+  border: 10px solid blue;
+  border-radius: 10%;
+  width: 400px;
+}
+.ItemCount{
+  display:flex;
+  flex-Direction:column;
+  align-Items:flex-start;
+}
+.botonera{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.botonera button{
+  justify-content: space-evenly;
+  margin: 5px ;
+  width:auto;
+}
+.Item{
+  margin-bottom: 10px;
+
+}
+
+
+.finalizarCompra Button{
+  margin:10px
+
+}
+.finalizarCarrito Button{
+  margin: 10px;
+}
+.Cart{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.CartItems{
+  border: 10px solid green;
+  border-radius: 10px;
+  width:fit-content;
+  margin:10px 10px 10px;
+}
+.CartItems h3{
+  text-decoration:underline;
 }

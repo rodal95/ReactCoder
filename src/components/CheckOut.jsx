@@ -7,7 +7,7 @@ import db from '../services'
 import Swal from 'sweetalert2'
 import Cart from './Cart'
 import { faRefresh } from '@fortawesome/free-solid-svg-icons'
-
+import Button from 'react-bootstrap/Button';
 export default function CheckOut(){
     
     const {getCart} = useContext(CartContext)
@@ -44,8 +44,8 @@ export default function CheckOut(){
                     <input  onChange ={(e)=> SetPhone(e.target.value)} type="text" placeholder='Telefono' ></input>
                     <input  onChange ={(e)=> SetEmail(e.target.value)} type="email" placeholder='Email' ></input>
                     {(name == '' || phone== '' || email == '')?
-                      <button type="button" onClick={finalizarCompra} disabled={true} >Finalizar Compra</button>:
-                      <button type="button" onClick={finalizarCompra} disabled={false}>Finalizar Compra</button>}
+                      <Button type="button" onClick={finalizarCompra} disabled={true} >Finalizar Compra</Button>:
+                      <Button type="button" onClick={finalizarCompra} disabled={false}>Finalizar Compra</Button>}
                 </form>
             </div>
         

@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 import {Link} from 'react-router-dom'
 export default function Item({id,title, price, image}) {
   return (
-    <div>
+    <div className='Item'>
       <Link to={`/item/${id}`} style={{textDecoration:"none"}}>
       <Card style={{width: '18rem'}}>
       <Card.Body>
