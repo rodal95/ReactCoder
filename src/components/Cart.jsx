@@ -21,13 +21,14 @@ export default function Cart(){
                         </div>))}
                     </div>
                     <span style={{backgroundColor:'white'}}><h1 style={{color:'black'}}>TOTAL A PAGAR ${items.reduce((pv, cv)=>pv+(cv.precio*cv.quantity) ,0)}</h1></span>
+                    <div style={{display:mostrar}} className='CheckOut'><CheckOut/></div>
                 </>}
             <div className='finalizarCarrito'>
                 <Button onClick={clear}>Limpiar Carrito</Button>
                 <Link to='/'><Button>Continuar comprando</Button></Link>
                 
                 <Button onClick={()=>{setMostrar()}}>Checkout</Button>
-                <div style={{display:mostrar}} className='CheckOut'><CheckOut/></div>
+                
                 
             </div>
         </>
