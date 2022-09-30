@@ -149,3 +149,19 @@
   border-radius: 20%;
   
 }
+.Footer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: aliceblue;
+  padding: 10px;
+}
+.Footer img{
+  max-width: 80px;
+  border-radius: 80%;
+
+}
+.Footer ul li{
+  list-style-type: none;
+}

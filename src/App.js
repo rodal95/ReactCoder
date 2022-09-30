@@ -7,6 +7,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import { CartProvider } from './CartContext';
 import CheckOut from './components/CheckOut';
 import Carrousel from './components/Carrousel'
+import Footer from './components/Footer';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       </BrowserRouter>
       </CartProvider>
       <Carrousel/>
+      <Footer/>
     </div>
     
   );
