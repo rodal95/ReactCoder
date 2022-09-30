@@ -1,5 +1,11 @@
+
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-image: url('https://w0.peakpx.com/wallpaper/769/828/HD-wallpaper-gun-ammunition-bullet-gun-weapon.jpg');
+  margin: auto;
+  
 }
 
 .App-logo {
@@ -36,17 +42,41 @@
     transform: rotate(360deg);
   }
 }
-.ItemDetail{
+.ItemGeneral{
+  display: flex;
+  text-decoration: white;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+
+.DescripcionItem{
   display:flex;
   flex-Direction:column;
+  flex-wrap: wrap;
   align-Items:center;
-  text-align: center;
-  margin-left: 100px;
-  margin-top: 100px;
+  text-align: left;
   padding: 10px 10px;
   border: 10px solid blue;
   border-radius: 10%;
-  width: 400px;
+  background-color: white;
+  max-width: 600px;
+  
+}
+.ItemDetail{
+  display:flex;
+  flex-Direction:column;
+  flex-wrap: wrap;
+  align-Items:center;
+  text-align: center;
+  padding: 10px 10px;
+  border: 10px solid blue;
+  border-radius: 10%;
+  background-color: white;
+  opacity: 90%;
+  max-width: 400px;
+  min-width: 400px;
+
 }
 .ItemCount{
   display:flex;
@@ -65,6 +95,7 @@
 }
 .Item{
   margin-bottom: 10px;
+  opacity: 90%;
 
 }
 
@@ -78,15 +109,43 @@
 }
 .Cart{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+  
 }
 .CartItems{
   border: 10px solid green;
   border-radius: 10px;
-  width:fit-content;
+  
   margin:10px 10px 10px;
+  box-shadow: 5px 5px 5px grey;
+  background-color: white;
+  opacity: 90%;
 }
 .CartItems h3{
   text-decoration:underline;
+}
+.CheckOut{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Formulario form{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+
+}
+
+.carrousel{
+  min-width: 200px;
+  max-width: 800px;
+  align-self: center;
+
+}
+.carrousel img{
+  border-radius: 20%;
+  
 }

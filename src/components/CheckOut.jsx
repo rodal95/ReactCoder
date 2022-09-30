@@ -38,7 +38,7 @@ export default function CheckOut(){
    
     return (
         <>
-            <div>
+            <div className='Formulario'>
                 <form>
                     <input  onChange ={(e)=>  SetName(e.target.value)} type="text" placeholder='Nombre' ></input>
                     <input  onChange ={(e)=> SetPhone(e.target.value)} type="text" placeholder='Telefono' ></input>

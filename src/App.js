@@ -6,6 +6,7 @@ import './App.css';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import { CartProvider } from './CartContext';
 import CheckOut from './components/CheckOut';
+import Carrousel from './components/Carrousel'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       </CartProvider>
+      <Carrousel/>
     </div>
     
   );
