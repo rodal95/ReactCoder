@@ -39,7 +39,7 @@ function BasicExample() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand><Link to={`/`} style={{textDecoration:"none"}}>Bienvenido a Armas y Guerras</Link></Navbar.Brand>
+        <Navbar.Brand><Link to={`/`} style={{textDecoration:"none"}}>AMMO NATION</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

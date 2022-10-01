@@ -8,7 +8,7 @@ import ItemList from './ItemList'
 import db from '../services'
 import { collection, doc, getDocs } from 'firebase/firestore';
 
-export default function ItemListContainer(greeting) {
+export default function ItemListContainer() {
   const [items, setItems] = useState({})
   const {categoryId} = useParams()
 

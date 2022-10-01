@@ -20,7 +20,7 @@ export default function Cart(){
                             <h3>Monto Total US${item.quantity*item.precio}</h3><Button onClick={()=>removeItem(item.id)}>Remover</Button>
                         </div>))}
                     </div>
-                    <span style={{backgroundColor:'white'}}><h1 style={{color:'black'}}>TOTAL A PAGAR ${items.reduce((pv, cv)=>pv+(cv.precio*cv.quantity) ,0)}</h1></span>
+                    <span className='Monto'><h1 style={{color:'black'}}>TOTAL A PAGAR ${items.reduce((pv, cv)=>pv+(cv.precio*cv.quantity) ,0)}</h1></span>
                     <div style={{display:mostrar}} className='CheckOut'><CheckOut/></div>
                 </>}
             <div className='finalizarCarrito'>
