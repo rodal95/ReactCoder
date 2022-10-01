@@ -164,9 +164,8 @@
 .Footer{
   display: flex;
   flex-direction: row;
-  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: aliceblue;
   padding: 10px;
 }
@@ -177,7 +176,7 @@
 .Footer img{
   max-width: 80px;
   border-radius: 80%;
-  justify-content: center;
+
 }
 .Footer ul li{
   list-style-type: none;
