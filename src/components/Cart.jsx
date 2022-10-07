@@ -18,12 +18,12 @@ export default function Cart(){
     return(
         <div style={{minHeight:'800px'}}>
             <PulseLoader color="#ffffff" size={25} style={{display:timer}}></PulseLoader>
-            {!items.length ? <h1 style={{color:'white'}}>Carrito Vacio</h1>:
+            {!items.length ? <h1 style={{color:'white'}}>Carrito Vacio, no tenes ningun producto para comprar</h1>:
                 <>
                 <div style={{display:mostrard}} className='CartTodo'>
                     <div  className='Cart' >
                         {items.map(((item, indx)=>
-                        <Card  key={indx} >
+                        <Card  key={indx} style= {{marginLeft:'30px'}}>
                             <Card.Img variant="top" style={{width:'300px'}} src={item.imagen} />
                             <Card.Title><h1>{item.titulo}</h1></Card.Title>
                             <Card.Body>
@@ -36,15 +36,14 @@ export default function Cart(){
                     <span className='Monto'><h1 style={{color:'black', alignSelf:'center'}}>TOTAL A PAGAR ${items.reduce((pv, cv)=>pv+(cv.precio*cv.quantity) ,0)}</h1></span>
                     <div style={{display:mostrar}} className='CheckOut'><CheckOut/></div>
                 </div>
-                </>}
-            <div className='finalizarCarrito'>
+                <div className='finalizarCarrito'>
                 <Button onClick={clear}>Limpiar Carrito</Button>
-                <Link to='/'><Button>Continuar comprando</Button></Link>
                 
                 <Button onClick={()=>{setMostrar()}}>Checkout</Button>
-                
-                
             </div>
+                </>}
+                <Link to='/'><Button>Volver al catalogo</Button></Link>
+           
         </div>
     )
 }

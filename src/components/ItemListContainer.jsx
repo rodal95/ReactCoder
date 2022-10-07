@@ -37,7 +37,7 @@ export default function ItemListContainer() {
 
   return (
     <>
-    <div style={{minHeight:'700px'}}>
+    <div style={{minHeight:'700px', marginTop:'30px'}}>
       <div className='ListaItems'>
       {items.length ?
       <ItemList items ={items}/>:
