@@ -41,7 +41,7 @@ export default function CheckOut(){
             <div className='Formulario'>
                 <form>
                     <input  onChange ={(e)=>  SetName(e.target.value)} type="text" placeholder='Nombre' ></input>
-                    <input  onChange ={(e)=> SetPhone(e.target.value)} type="text" placeholder='Telefono' ></input>
+                    <input  onChange ={(e)=> SetPhone(e.target.value)} type="number" placeholder='Telefono' ></input>
                     <input  onChange ={(e)=> SetEmail(e.target.value)} type="email" placeholder='Email' ></input>
                     {(name == '' || phone== '' || email == '')?
                       <Button type="button" onClick={finalizarCompra} disabled={true} >Finalizar Compra</Button>:

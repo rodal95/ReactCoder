@@ -31,8 +31,9 @@ export default function ItemDetailContainer() {
       }
     },[id])
   return (
-    <>
+    <div style={{minHeight:'700px'}}>
+
     {Object.keys(item).length && <ItemDetail item={item}/>} 
-    </>   
+    </div>   
   )
 }

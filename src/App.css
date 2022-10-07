@@ -3,7 +3,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  background-image: url('https://w0.peakpx.com/wallpaper/769/828/HD-wallpaper-gun-ammunition-bullet-gun-weapon.jpg');
+  background-image: url('https://p4.wallpaperbetter.com/wallpaper/832/880/968/dark-expendables-skull-skulls-wallpaper-preview.jpg');
   margin: auto;
   
 }
@@ -42,11 +42,15 @@
     transform: rotate(360deg);
   }
 }
+
 .ItemGeneral{
+  margin-top: 50px;
+  margin-bottom: 50px;
   display: flex;
   text-decoration: white;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  min-height: 500px;
 
 }
 
@@ -57,12 +61,11 @@
   align-Items:center;
   text-align: left;
   padding: 10px 10px;
-  border: 10px solid blue;
-  border-radius: 10%;
-  background-color: white;
+  min-width: 600px;
   max-width: 600px;
   
 }
+
 .ItemDetail{
   display:flex;
   flex-Direction:column;
@@ -98,7 +101,10 @@
   opacity: 90%;
 
 }
-
+.finalizarCompra{
+  display: flex;
+  flex-direction: column;
+}
 
 .finalizarCompra Button{
   margin:10px
@@ -107,22 +113,21 @@
 .finalizarCarrito Button{
   margin: 10px;
 }
+.CartTodo{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
 .Cart{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+  padding: 10px;
   
 }
-.CartItems{
-  border: 10px solid green;
-  border-radius: 20px;
-  
-  margin:10px 10px 10px;
-  box-shadow: 5px 5px 5px grey;
-  background-color: white;
-  opacity: 90%;
-}
+
 .CartItems h3{
   text-decoration:underline;
 }
@@ -133,10 +138,15 @@
   align-items: center;
 }
 .Formulario{
-  width: 50%;
+  display: flex;
+  width: 40%;
   background-color: aliceblue;
   border-radius: 20px;
   margin-top: 10px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  min-width: 300px;
 }
 .Formulario form input{
   padding-top: 10px;
@@ -150,7 +160,12 @@
   padding: 10px;
   width:100%;
 }
-
+.ListaItems{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50%;
+}
 .carrousel{
   min-width: 200px;
   max-width: 800px;
@@ -162,6 +177,7 @@
   
 }
 .Footer{
+  margin-top: 80px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

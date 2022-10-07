@@ -7,6 +7,8 @@ import {useParams} from 'react-router-dom'
 import ItemList from './ItemList'
 import db from '../services'
 import { collection, doc, getDocs } from 'firebase/firestore';
+import {PulseLoader} from 'react-spinners'
+import Carrousel from './Carrousel'
 
 export default function ItemListContainer() {
   const [items, setItems] = useState({})
@@ -34,16 +36,19 @@ export default function ItemListContainer() {
   },[categoryId])
 
   return (
-    <div>
-      <div>
+    <>
+    <div style={{minHeight:'700px'}}>
+      <div className='ListaItems'>
       {items.length ?
       <ItemList items ={items}/>:
-      <Spinner animation="border" role="status">
+      <PulseLoader color="#ffffff" size={25}>
       <span className="visually-hidden">Loading...</span>
-      </Spinner>
+      </PulseLoader>
       }</div>
 
-   
+      
     </div>
+    <Carrousel/>
+    </>
   )
 }

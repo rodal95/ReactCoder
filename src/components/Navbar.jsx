@@ -48,7 +48,7 @@ function BasicExample() {
               Home
               </Link>
               </Navbar.Text>
-            <Nav.Link>Nosotros</Nav.Link>
+            
             <NavDropdown title="Catalogo" id="basic-nav-dropdown">
            
               {links}
@@ -60,7 +60,7 @@ function BasicExample() {
         </Navbar.Collapse>
        {!!items.length && <Link to={'/cart'}> <CartWidjet/></Link>}
       </Container>
-
+    
       
     </Navbar>
   );
